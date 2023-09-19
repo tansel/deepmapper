@@ -1,1 +1,10 @@
-
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Ersavas"
+  given-names: "Tansel"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "DeepMapping - Using CNNs with non-image data"
+version: 0.0.1
+date-released: 2023-09-19
+url: "https://github.com/tansel/deepmapper"
