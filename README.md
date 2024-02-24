@@ -14,7 +14,7 @@ DeepMapper enables a simple pipeline to process non-image data as images to anal
 
 ## Jupyter Notebooks
 
-* [Demo of CNN recognition of dispersed MNIST dataset](./pytorch-mnist-resnet18-shuffle-demo.ipynb)*
+* [Demo of CNN recognition of dispersed MNIST dataset](./pytorch-mnist-resnet18-shuffle-demo.ipynb)
 * [Generation and basic analysis of Needle in the Haystack NIHS data](./deepmap_pytorch_poc_nihs_data_generation.ipynb)
 * [DeepMapper Proof of concept analysing NIHS data](./deepmapper_pytorch-proof-of-concept.ipynb)
 * [DeepMapper TCGA data analysis for comparison with DeepInsight](./deepmapper_pytorch-TCGAData.ipynb)
