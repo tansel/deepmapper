@@ -1,0 +1,9 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - given-names: Tansel
+    family-names: Ersavas
+    orcid: 'https://orcid.org/0000-0002-2961-0772'
+title: pyDeepMapper
+doi: 10.21203/rs.3.rs-3868861
+url: 'https://github.com/tansel/deepmapper'

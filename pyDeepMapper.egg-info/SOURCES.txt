@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pyDeepMapper/__init__.py
+pyDeepMapper/deep_mapper.py
+pyDeepMapper.egg-info/PKG-INFO
+pyDeepMapper.egg-info/SOURCES.txt
+pyDeepMapper.egg-info/dependency_links.txt
+pyDeepMapper.egg-info/requires.txt
+pyDeepMapper.egg-info/top_level.txt

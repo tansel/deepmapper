@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pyDeepMapper
+Version: 0.0.1
+Summary: Analyse non-image data using CNNs
+Home-page: https://github.com/tansel/deepmapper
+Author: Tansel Ersavas
+Author-email: t.ersavas@unsw.edu.au
+License: Apache 2
+License-File: LICENSE
