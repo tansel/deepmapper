@@ -33,7 +33,7 @@ for name, freq, importance in findings.ranking(20):
 - **[User manual](USER_MANUAL.md)** is the full guide: configuration, data loading,
   evaluation, attribution, early stopping, de-novo recovery, package layout.
 - **[API reference](api.md)** is generated from the docstrings.
-- **[Reproducing the paper](REPRODUCIBILITY.md)** maps every figure to its script.
+- **[Reproducing the analyses](REPRODUCIBILITY.md)** maps every figure to its script.
 - **[Using DeepMapper with Claude](claude-skill.md)** drives an analysis through the
   bundled Claude Code skill.
 

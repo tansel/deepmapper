@@ -1,6 +1,6 @@
 ---
 name: deepmapper
-description: Run a DeepMapper analysis with Claude. Use this when the user wants to analyse a single-cell RNA-seq or other high-dimensional omics matrix WITHOUT dimension reduction, find the genes that separate a cell state (including distributed "gene chords" that only matter in combination), attribute a classifier back to named features, compare against a linear baseline, or reproduce a figure from the DeepMapper paper. Triggers on "analyse this with DeepMapper", "find gene chords", "which genes separate these states", "no-filtering / keep every feature", "attribute back to genes", or "reproduce the DeepMapper figure".
+description: Run a DeepMapper analysis with Claude. Use this when the user wants to analyse a single-cell RNA-seq or other high-dimensional omics matrix WITHOUT dimension reduction, find the genes that separate a cell state (including distributed "gene chords" that only matter in combination), attribute a classifier back to named features, compare against a linear baseline, or reproduce one of the example analyses. Triggers on "analyse this with DeepMapper", "find gene chords", "which genes separate these states", "no-filtering / keep every feature", "attribute back to genes", or "reproduce a DeepMapper analysis figure".
 ---
 
 # Using DeepMapper
@@ -87,7 +87,7 @@ res = evaluate(X, y, cfg, class_names=ds.label_names)
 print(res.accuracy, res.macro_f1)
 ```
 
-## Reproducing a paper figure
+## Reproducing an analysis figure
 
 `docs/REPRODUCIBILITY.md` maps every figure to its script. Install, fetch the public
 data, then run the script from the repo root:

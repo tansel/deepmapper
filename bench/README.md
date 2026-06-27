@@ -1,7 +1,7 @@
-# Paper analysis scripts
+# Analysis scripts
 
 These are the scripts that reproduce the figures and quantitative claims in the
-DeepMapper T-cell paper. Each one consumes a public dataset, runs the DeepMapper
+DeepMapper analyses. Each one consumes a public dataset, runs the DeepMapper
 pipeline (or a control), and writes a JSON or CSV result. `docs/REPRODUCIBILITY.md`
 maps every figure and result to the script that makes it.
 
@@ -37,4 +37,4 @@ PYTORCH_ENABLE_MPS_FALLBACK=1 python bench/review_controls.py
 ```
 
 Scripts not in this folder were left out on purpose: they are either internal
-tooling or probes that did not make the paper.
+tooling or probes outside the analysis set.

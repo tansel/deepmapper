@@ -8,7 +8,7 @@ matter only in combination show up as gene chords: sets of genes that separate a
 state together while each one alone looks weak.
 
 This manual covers installation, the core workflow, configuration, data loading,
-evaluation, attribution, and how to reproduce the paper.
+evaluation, attribution, and how to reproduce the analyses.
 
 ## Contents
 
@@ -25,7 +25,7 @@ evaluation, attribution, and how to reproduce the paper.
 11. [Early stopping](#early-stopping)
 12. [De-novo transcript recovery (optional)](#de-novo-transcript-recovery-optional)
 13. [Package layout](#package-layout)
-14. [Reproducing the paper](#reproducing-the-paper)
+14. [Reproducing the analyses](#reproducing-the-analyses)
 15. [Practical notes](#practical-notes)
 16. [Using DeepMapper with Claude](#using-deepmapper-with-claude)
 
@@ -163,7 +163,7 @@ top = linear_baseline.top_genes(ranking, 20)
 
 `fit(X, y, feature_names=None, C=1.0, max_iter=5000)` returns the fitted classifier,
 the scaler, and a ranking of `(name, importance)` sorted descending, where importance
-is the largest standardised coefficient across classes. In the paper the linear
+is the largest standardised coefficient across classes. In the DeepMapper analyses the linear
 backbone closely matches the CNN, which is the point: the signal is real, not an
 artefact of a heavy model.
 
@@ -190,7 +190,7 @@ findings = run(ds.X, ds.y, cfg, feature_names=ds.var_names)
 `load_10x_populations` concatenates the matrices on their shared genes (inner join).
 `normalize=True` applies normalize-total plus log1p.
 
-Helpers for the experiments in the paper:
+Helpers for the example experiments:
 
 - `highly_variable_subset(ds, n_top_genes=2000)`: HVG-filter a Dataset and return the
   kept gene indices, to measure what dimension reduction throws away.
@@ -285,7 +285,7 @@ A missing tool raises `BioToolUnavailable`.
 "Pure" modules import with the standard library only; the heavy dependencies load
 lazily, so importing the package never forces torch.
 
-## Reproducing the paper
+## Reproducing the analyses
 
 The `bench/` folder holds the scripts that produce the figures and quantitative
 claims, each one driven by a public dataset. `docs/REPRODUCIBILITY.md` maps every

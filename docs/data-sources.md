@@ -1,7 +1,7 @@
 # DeepMapper, Public scRNA-seq Data Sources for Verification / Benchmarking
 
 Curated, **link-verified** (HTTP 200, see "Verified" column) public single-cell RNA-seq
-datasets that back each case study in the DeepMapper method paper. Every URL below was
+datasets that back each DeepMapper case study. Every URL below was
 checked with an HTTP `HEAD`/`GET` on 2026-06-20 unless explicitly marked **UNVERIFIED**.
 
 Ground-truth (GT) legend:
@@ -15,7 +15,7 @@ Ground-truth (GT) legend:
 
 | Rank | Dataset | Why | GT |
 |------|---------|-----|----|
-| 1 | **10x Zheng 2017 FACS-sorted CD4 subsets** (helper / Treg / naive / memory) | This *is* the paper's "CD4 subset data by 10X"; four populations are antibody-sorted, so the class label is physical, not inferred | **FACS** |
+| 1 | **10x Zheng 2017 FACS-sorted CD4 subsets** (helper / Treg / naive / memory) | This is the DeepMapper "CD4 subset data by 10X"; four populations are antibody-sorted, so the class label is physical, not inferred | **FACS** |
 | 2 | 10x Zheng 2017 FACS-sorted CD8 subsets (cytotoxic / naive cytotoxic) | Same source, covers case 2 | **FACS** |
 | 3 | `all_pure_select_11types.rds` (Zheng pre-packaged 11 sorted sub-pops) | One 687 KB file = all sorted pops + labels, instant load | **FACS** |
 | 4 | Kang 2018 GSE96583 (IFN-β stim vs ctrl) | Case 3 ground-truth condition axis | **Design** |
@@ -27,7 +27,7 @@ Ground-truth (GT) legend:
 ## Case 1 & 2, CD4+ and CD8+ T-cell subtypes (Zheng et al. 2017, FACS-sorted)
 
 **Citation:** Zheng GXY et al. "Massively parallel digital transcriptional profiling of single cells." *Nature Communications* 8:14049 (2017).
-**Ground truth:** **FACS / bead-enriched sort = physical label.** Each population was immuno-sorted *before* droplet capture, so the cell-type label is the sort gate, not a downstream cluster call. This is the strongest GT available for cell-type classification and is exactly the "CD4+ subset data by 10X" the DeepMapper paper refers to.
+**Ground truth:** **FACS / bead-enriched sort = physical label.** Each population was immuno-sorted *before* droplet capture, so the cell-type label is the sort gate, not a downstream cluster call. This is the strongest GT available for cell-type classification and is exactly the "CD4+ subset data by 10X" the DeepMapper analyses use.
 **Format:** 10x CellRanger `filtered_gene_bc_matrices` (`matrix.mtx` + `genes.tsv` + `barcodes.tsv`) inside a `.tar.gz`. Genes ≈ 32,738 (hg19 reference) before filtering.
 
 Direct download URL pattern (all **verified 200 OK**, 2026-06-20):
@@ -89,7 +89,7 @@ x <- readRDS("all_pure_select_11types.rds")   # contains the 11 sorted sub-popul
 
 ## Case 3, Stimulated vs unstimulated T cells
 
-Paper's numbers: **stimulated 4,400 cells / 16,394 genes; unstimulated 5,092 cells / 16,612 genes.**
+Reference numbers: **stimulated 4,400 cells / 16,394 genes; unstimulated 5,092 cells / 16,612 genes.**
 
 ### Primary candidate, Kang et al. 2018 (IFN-β stim vs ctrl PBMC), RECOMMENDED
 
@@ -121,7 +121,7 @@ library(ifnb.SeuratData); data("ifnb")   # ifnb$stim = "CTRL"/"STIM"
 
 ### Closer match to the ~4,400 / ~5,092 counts (anti-CD3/CD28 T-cell activation)
 
-The Kang set is IFN-β-stimulated PBMCs (~15k cells), not a perfect match to the paper's ~4,400/~5,092 split. If DeepMapper used a **T-cell-activation** (anti-CD3/CD28) stim-vs-rest set with those exact counts, the most likely public source is a resting-vs-stimulated **purified T cell** 10x study (e.g. the "stimulated/frozen human PBMC" deep-sequencing benchmark in *Scientific Data* 2023, `s41597-023-02348-z`). **UNVERIFIED, accession not pinned down.** Recommend the author confirm the exact sub-cohort; the 4,400/5,092 numbers strongly suggest a single 10x lane each, which is consistent with one activation experiment rather than the multiplexed Kang design.
+The Kang set is IFN-β-stimulated PBMCs (~15k cells), not a perfect match to the reference ~4,400/~5,092 split. If DeepMapper used a **T-cell-activation** (anti-CD3/CD28) stim-vs-rest set with those exact counts, the most likely public source is a resting-vs-stimulated **purified T cell** 10x study (e.g. the "stimulated/frozen human PBMC" deep-sequencing benchmark in *Scientific Data* 2023, `s41597-023-02348-z`). **UNVERIFIED, accession not pinned down.** Recommend the author confirm the exact sub-cohort; the 4,400/5,092 numbers strongly suggest a single 10x lane each, which is consistent with one activation experiment rather than the multiplexed Kang design.
 
 ---
 

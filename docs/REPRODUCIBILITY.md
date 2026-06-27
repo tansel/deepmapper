@@ -1,6 +1,6 @@
 # Reproducibility map
 
-This file maps every figure and quantitative claim in the DeepMapper T-cell paper to
+This file maps every figure and quantitative claim produced by the DeepMapper analyses to
 the script that produces it and the public dataset it consumes. No new data was
 generated; everything runs on public accessions.
 

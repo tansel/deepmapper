@@ -70,10 +70,10 @@ Material; the API reference is generated from the docstrings). In the repo:
 - **[User manual](docs/USER_MANUAL.md)** is the full guide: configuration, data
   loading, evaluation, attribution, early stopping, de-novo recovery, and the package
   layout.
-- **[Reproducibility map](docs/REPRODUCIBILITY.md)** maps every paper figure to its
+- **[Reproducibility map](docs/REPRODUCIBILITY.md)** maps every figure to its
   script and dataset.
 - **[Data sources](docs/data-sources.md)** lists the dataset accessions.
-- **[bench/](bench/)** holds the paper analysis scripts.
+- **[bench/](bench/)** holds the analysis scripts.
 
 Build the docs locally with `pip install -e ".[docs]"` then `mkdocs serve`.
 
@@ -85,7 +85,7 @@ example, "analyse this h5ad with DeepMapper and tell me which genes separate the
 states". Claude loads your data, runs the linear baseline and the pipeline, and reads
 back the ranked gene chord. See [docs/claude-skill.md](docs/claude-skill.md).
 
-## Reproducing the paper
+## Reproducing the analyses
 
 ```bash
 pip install -e ".[all]"

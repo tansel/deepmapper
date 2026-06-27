@@ -4,7 +4,7 @@ The repository ships a Claude Code skill at
 `.claude/skills/deepmapper/SKILL.md`. When you open this repo in
 [Claude Code](https://claude.com/claude-code), the skill is available and Claude can
 drive a full DeepMapper analysis for you: load the data, run a fast linear check, run
-the pipeline, read the gene chord, and reproduce a paper figure.
+the pipeline, read the gene chord, and reproduce an example figure.
 
 ## How it works
 
@@ -15,7 +15,7 @@ the body. The DeepMapper skill triggers when you ask Claude to:
 - analyse a single-cell or omics matrix without dimension reduction,
 - find the genes (or gene chords) that separate cell states,
 - attribute a classifier back to named features,
-- or reproduce a figure from the DeepMapper paper.
+- or reproduce one of the example analysis figures.
 
 ## Use it
 
@@ -23,7 +23,7 @@ the body. The DeepMapper skill triggers when you ask Claude to:
 2. Ask in plain language, for example:
    - "Analyse this h5ad with DeepMapper and tell me which genes separate the states."
    - "Find the gene chord for CD4 memory in this matrix."
-   - "Reproduce Figure 1 from the DeepMapper paper."
+   - "Reproduce the Figure 1 analysis from the bench scripts."
 3. Claude loads the skill and walks the workflow: it checks the install, loads your
    data with `pydeepmapper.io`, runs a deterministic linear baseline first, then runs
    `pydeepmapper.runner.run`, and reads `findings.ranking(...)`.
@@ -33,7 +33,7 @@ setup lists it.
 
 ## What the skill will and will not do
 
-The skill follows the same honest-analysis rules the paper does:
+The skill follows the same honest-analysis rules:
 
 - It keeps every feature. It will not select highly variable genes or run PCA first.
 - It runs the fast, deterministic linear baseline before the CNN, and expects the two
