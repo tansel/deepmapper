@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepmapper"
+version = "0.1.0"
+description = "No-filtering, attribute-back analysis of high-dimensional omics: keep every feature, read it with a configurable backbone over multiple arrangements, and attribute the result to named features ('gene chords')."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Tansel Ersavas" },
+  # [AUTHOR: add co-authors / maintainer email before publishing]
+]
+keywords = ["single-cell", "RNA-seq", "feature-attribution", "no-dimension-reduction",
+            "gene-chords", "de-novo-transcripts", "deep-learning", "interpretability"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Core engine: run(X, y) with the linear/mlp/cnn backbones + integrated-gradients attribution.
+dependencies = [
+  "numpy>=1.23",
+  "scikit-learn>=1.2",
+  "pandas>=1.5",
+  "torch>=2.0",
+  "captum>=0.6",
+]
+
+[project.optional-dependencies]
+# data ingestion from 10x / h5ad
+io = ["anndata>=0.9", "scanpy>=1.9"]
+# extra image backbones (ResNet / ViT / timm); the default cnn_small needs only torch
+backbones = ["torchvision>=0.15", "timm>=0.9", "vit-pytorch>=1.6"]
+# de-novo-hybrid ingestion: recover transcripts absent from the reference and fold them in.
+# Python deps only; the external tools (hisat2, Trinity, salmon) install via bioconda, see README.
+denovo = ["biopython>=1.81", "pandas>=1.5"]
+dev = ["pytest>=7.0", "hypothesis>=6.0"]
+# everything
+all = ["anndata>=0.9", "scanpy>=1.9", "torchvision>=0.15", "timm>=0.9", "vit-pytorch>=1.6",
+       "biopython>=1.81"]
+
+[project.urls]
+Homepage = "https://github.com/tansel/deepmapper"
+Repository = "https://github.com/tansel/deepmapper"
+Issues = "https://github.com/tansel/deepmapper/issues"
+
+[tool.setuptools.packages.find]
+include = ["pydeepmapper*"]

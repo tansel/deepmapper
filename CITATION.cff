@@ -1,9 +1,31 @@
-cff-version: 1.0.0
-message: "If you use this software, please cite it as below."
+cff-version: 1.2.0
+message: "If you use DeepMapper, please cite the Scientific Reports article below."
+title: DeepMapper
+abstract: >-
+  A pipeline that maps non-image, high-dimensional data into image-like structures
+  with minimal processing so it can be analysed with CNNs (and other deep models),
+  without dimension reduction, recovering weak signals that standard filtering discards.
 authors:
-  - given-names: Tansel
-    family-names: Ersavas
-    orcid: 'https://orcid.org/0000-0002-2961-0772'
-title: pyDeepMapper
-doi: 10.21203/rs.3.rs-3868861
-url: 'https://github.com/tansel/deepmapper'
+  - family-names: Ersavas
+    given-names: Tansel
+  - family-names: Smith
+    given-names: Martin A.
+  - family-names: Mattick
+    given-names: John S.
+repository-code: "https://github.com/tansel/deepmapper"
+license: Apache-2.0
+type: software
+preferred-citation:
+  type: article
+  title: "Novel applications of Convolutional Neural Networks in the age of Transformers"
+  authors:
+    - family-names: Ersavas
+      given-names: Tansel
+    - family-names: Smith
+      given-names: Martin A.
+    - family-names: Mattick
+      given-names: John S.
+  journal: "Scientific Reports"
+  volume: 14
+  year: 2024
+  doi: "10.1038/s41598-024-60709-z"

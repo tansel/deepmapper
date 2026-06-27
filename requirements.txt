@@ -1,7 +1,5 @@
-numpy
-scipy
-scikit-learn >= 0.22
-pandas
-matplotlib
-torch
-captum
+# Core test deps, the pure, contracted layers (transform, accumulate, config,
+# augment) + their property tests run with just these (no numpy/torch).
+pytest>=7.0
+hypothesis>=6.0
+

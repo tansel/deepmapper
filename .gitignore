@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.hypothesis/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Data and large outputs (download via scripts/download_data.sh; deposited on Zenodo)
+data/
+results/
+*.h5ad
+*.mtx
+*.csv.gz
+*.txt.gz
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

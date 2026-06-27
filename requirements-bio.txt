@@ -1,0 +1,15 @@
+# Optional "bio" extras for the de-novo-hybrid ingestion path (pydeepmapper.hybrid_assembly).
+# Equivalent to:  pip install "deepmapper[denovo]"  (the [denovo] extra in pyproject.toml).
+# The PURE core (namespacing + sc-table assembly) needs only pandas; these are required only
+# to RUN the assembly orchestration on raw reads.
+#
+# Python packages:
+biopython>=1.81          # FASTQ/FASTA parsing, sequence export
+pandas>=1.5              # sc-table assembly + quant.sf parsing
+#
+# External tools (NOT pip-installable, via conda/bioconda or your cluster module system):
+#   hisat2     # reference alignment + capture of unaligned reads (--un)
+#   trinityrnaseq (Trinity)   # de-novo assembly of the non-documented reads
+#   salmon     # hybrid-reference index + per-sample quantification
+#
+#   conda install -c bioconda hisat2 trinity salmon

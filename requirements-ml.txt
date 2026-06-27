@@ -1,0 +1,13 @@
+# ML runtime extras, needed to BUILD/TRAIN backbones and run the iterate-N
+# orchestrator (pydeepmapper.runner) and the benchmark. The pure core does NOT
+# need these. Install into a dedicated venv:
+#     python3 -m venv .venv-ml && . .venv-ml/bin/activate
+#     pip install -r requirements.txt -r requirements-ml.txt
+numpy>=1.23
+torch>=2.0
+torchvision>=0.15
+timm>=0.9            # ViT / MobileViT / ConvNeXt backbones
+captum>=0.6         # CNN attribution (Integrated Gradients, Saliency, Occlusion)
+vit-pytorch>=1.6    # CCT (Compact Convolutional Transformer), top ViT pick
+scikit-learn>=1.2   # metrics / splits for notebooks
+pandas>=1.5
