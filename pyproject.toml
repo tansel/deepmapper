@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deepmapper"
-version = "0.1.0"
+version = "1.0.0"
 description = "No-filtering, attribute-back analysis of high-dimensional omics: keep every feature, read it with a configurable backbone over multiple arrangements, and attribute the result to named features ('gene chords')."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -18,7 +18,7 @@ maintainers = [
 keywords = ["single-cell", "RNA-seq", "feature-attribution", "no-dimension-reduction",
             "gene-chords", "de-novo-transcripts", "deep-learning", "interpretability"]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Science/Research",
   "License :: OSI Approved :: Apache Software License",
   "Programming Language :: Python :: 3",

@@ -1,0 +1,58 @@
+name: release
+
+# Tag a version (e.g. `git tag v1.0.0 && git push origin v1.0.0`) to build the
+# package, publish it to PyPI, and cut a GitHub Release.
+#
+# PyPI upload uses Trusted Publishing (OIDC), so there is NO token to store. One-time
+# setup on PyPI: project settings -> Publishing -> add a GitHub trusted publisher with
+#   owner: tansel,  repo: deepmapper,  workflow: release.yml,  environment: pypi
+# For the very first upload, register it as a "pending publisher" before the package
+# exists. Create a GitHub environment named "pypi" in the repo settings too.
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build
+      - run: python -m build
+      - run: pip install twine && twine check dist/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  pypi:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write          # Trusted Publishing (OIDC), no token needed
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+
+  github-release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # create the GitHub Release
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true
