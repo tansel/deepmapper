@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://tansel.github.io/deepmapper/</loc>
+         <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://tansel.github.io/deepmapper/REPRODUCIBILITY/</loc>
+         <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://tansel.github.io/deepmapper/USER_MANUAL/</loc>
+         <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://tansel.github.io/deepmapper/api/</loc>
+         <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://tansel.github.io/deepmapper/claude-skill/</loc>
+         <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://tansel.github.io/deepmapper/data-sources/</loc>
+         <lastmod>2026-06-27</lastmod>
+    </url>
+</urlset>
