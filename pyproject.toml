@@ -10,8 +10,10 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "Apache-2.0" }
 authors = [
-  { name = "Tansel Ersavas" },
-  # [AUTHOR: add co-authors / maintainer email before publishing]
+  { name = "Tansel Ersavas", email = "tansel@tansel.org" },
+]
+maintainers = [
+  { name = "Tansel Ersavas", email = "tansel@tansel.org" },
 ]
 keywords = ["single-cell", "RNA-seq", "feature-attribution", "no-dimension-reduction",
             "gene-chords", "de-novo-transcripts", "deep-learning", "interpretability"]
