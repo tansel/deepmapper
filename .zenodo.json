@@ -1,0 +1,30 @@
+{
+  "upload_type": "software",
+  "title": "DeepMapper: no-filtering, attribute-back analysis of high-dimensional omics",
+  "description": "DeepMapper keeps every feature (no highly variable gene selection, no dimension reduction), reads the full matrix with a configurable backbone over several feature arrangements, and attributes the result back to named features, surfacing distributed gene chords that standard pipelines discard. An optional de-novo step recovers transcripts absent from the reference annotation.",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Ersavas, Tansel",
+      "orcid": "0000-0002-2961-0772"
+    }
+  ],
+  "keywords": [
+    "single-cell",
+    "RNA-seq",
+    "feature-attribution",
+    "no-dimension-reduction",
+    "gene-chords",
+    "de-novo-transcripts",
+    "deep-learning",
+    "interpretability"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1038/s41598-024-60709-z",
+      "relation": "isDocumentedBy",
+      "scheme": "doi"
+    }
+  ]
+}
