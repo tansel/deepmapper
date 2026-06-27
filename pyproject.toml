@@ -47,6 +47,8 @@ backbones = ["torchvision>=0.15", "timm>=0.9", "vit-pytorch>=1.6"]
 # Python deps only; the external tools (hisat2, Trinity, salmon) install via bioconda, see README.
 denovo = ["biopython>=1.81", "pandas>=1.5"]
 dev = ["pytest>=7.0", "hypothesis>=6.0"]
+# documentation site (MkDocs Material + API reference from docstrings)
+docs = ["mkdocs-material>=9.5", "mkdocstrings[python]>=0.24"]
 # everything
 all = ["anndata>=0.9", "scanpy>=1.9", "torchvision>=0.15", "timm>=0.9", "vit-pytorch>=1.6",
        "biopython>=1.81"]

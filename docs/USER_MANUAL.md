@@ -27,6 +27,7 @@ evaluation, attribution, and how to reproduce the paper.
 13. [Package layout](#package-layout)
 14. [Reproducing the paper](#reproducing-the-paper)
 15. [Practical notes](#practical-notes)
+16. [Using DeepMapper with Claude](#using-deepmapper-with-claude)
 
 ## Install
 
@@ -309,6 +310,22 @@ python bench/ribosomal_validation.py     # Fig 1, and so on
   single-pixel gene signal, so `cnn_small` is the safe default for sparse data.
 - **How many passes.** More passes give a more stable ranking. Grow `n_passes` until
   the top-k membership stops changing between two halves of the runs.
+
+## Using DeepMapper with Claude
+
+The repository ships a [Claude Code](https://claude.com/claude-code) skill at
+`.claude/skills/deepmapper/SKILL.md`. Open the repo in Claude Code and ask in plain
+language, for example "analyse this h5ad with DeepMapper and tell me which genes
+separate the states" or "reproduce Figure 1". Claude loads the skill and walks the
+workflow: it checks the install, loads your data with `pydeepmapper.io`, runs the fast
+deterministic linear baseline first, then runs `pydeepmapper.runner.run`, and reads
+`findings.ranking(...)`.
+
+The skill follows the same honest-analysis rules as this manual: keep every feature,
+run the linear baseline before the CNN, report a finding as a module rather than a
+fixed gene list, default to `cnn_small`, and do not over-read one run. You can invoke
+it explicitly with `/deepmapper`, or edit the Markdown to add your own datasets and
+defaults. See [Using DeepMapper with Claude](claude-skill.md) for the full page.
 
 ## Citation
 

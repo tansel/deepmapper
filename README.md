@@ -64,6 +64,9 @@ clf, scaler, ranking = linear_baseline.fit(X, y, feature_names=genes)
 
 ## Documentation
 
+The full docs site is at **https://tansel.github.io/deepmapper/** (built with MkDocs
+Material; the API reference is generated from the docstrings). In the repo:
+
 - **[User manual](docs/USER_MANUAL.md)** is the full guide: configuration, data
   loading, evaluation, attribution, early stopping, de-novo recovery, and the package
   layout.
@@ -71,6 +74,16 @@ clf, scaler, ranking = linear_baseline.fit(X, y, feature_names=genes)
   script and dataset.
 - **[Data sources](docs/data-sources.md)** lists the dataset accessions.
 - **[bench/](bench/)** holds the paper analysis scripts.
+
+Build the docs locally with `pip install -e ".[docs]"` then `mkdocs serve`.
+
+## Using DeepMapper with Claude
+
+The repo ships a [Claude Code](https://claude.com/claude-code) skill at
+`.claude/skills/deepmapper/SKILL.md`. Open the repo in Claude Code and ask, for
+example, "analyse this h5ad with DeepMapper and tell me which genes separate the
+states". Claude loads your data, runs the linear baseline and the pipeline, and reads
+back the ranked gene chord. See [docs/claude-skill.md](docs/claude-skill.md).
 
 ## Reproducing the paper
 

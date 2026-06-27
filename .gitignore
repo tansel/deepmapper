@@ -21,6 +21,9 @@ results/
 *.csv.gz
 *.txt.gz
 
+# MkDocs build output
+site/
+
 # OS / editor
 .DS_Store
 .idea/
