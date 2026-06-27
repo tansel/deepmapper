@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use DeepMapper, please cite the Scientific Reports article below."
+message: "If you use DeepMapper, please cite the software (DOI below) and the Scientific Reports article."
 title: DeepMapper
 abstract: >-
   A pipeline that maps non-image, high-dimensional data into image-like structures
@@ -8,11 +8,9 @@ abstract: >-
 authors:
   - family-names: Ersavas
     given-names: Tansel
-  - family-names: Smith
-    given-names: Martin A.
-  - family-names: Mattick
-    given-names: John S.
+    orcid: "https://orcid.org/0000-0002-2961-0772"
 repository-code: "https://github.com/tansel/deepmapper"
+doi: "10.5281/zenodo.20967454"
 license: Apache-2.0
 type: software
 preferred-citation:

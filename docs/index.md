@@ -1,5 +1,7 @@
 # DeepMapper
 
+[![DOI](https://zenodo.org/badge/762747948.svg)](https://doi.org/10.5281/zenodo.20967454)
+
 **No-filtering, attribute-back analysis of high-dimensional omics.**
 
 DeepMapper keeps every feature (no highly-variable-gene selection, no dimension
@@ -42,3 +44,5 @@ for name, freq, importance in findings.ranking(20):
 > Ersavas T., Smith M.A., Mattick J.S. (2024). Novel applications of Convolutional
 > Neural Networks in the age of Transformers. Scientific Reports 14.
 > https://doi.org/10.1038/s41598-024-60709-z
+
+To cite this software release, use the Zenodo archive: https://doi.org/10.5281/zenodo.20967454
