@@ -17,7 +17,7 @@ reference; do not invent parameters.
 ## 1. Confirm the environment
 
 ```bash
-python -c "import pydeepmapper; print('ok')" || pip install "deepmapper[all]"
+python -c "import pydeepmapper; print('ok')" || pip install "pydeepmapper[all]"
 ```
 
 The pure core imports with the standard library only. Loading 10x / h5ad data needs

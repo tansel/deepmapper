@@ -11,11 +11,11 @@ annotation.
 ## Install
 
 ```bash
-pip install deepmapper                 # core engine: run(X, y) + linear/mlp/cnn + attribution
-pip install "deepmapper[io]"           # + 10x / h5ad loaders (scanpy, anndata)
-pip install "deepmapper[backbones]"    # + ResNet / ViT / timm backbones
-pip install "deepmapper[denovo]"       # + de-novo ingestion (biopython; external tools below)
-pip install "deepmapper[all]"          # everything
+pip install pydeepmapper                 # core engine: run(X, y) + linear/mlp/cnn + attribution
+pip install "pydeepmapper[io]"           # + 10x / h5ad loaders (scanpy, anndata)
+pip install "pydeepmapper[backbones]"    # + ResNet / ViT / timm backbones
+pip install "pydeepmapper[denovo]"       # + de-novo ingestion (biopython; external tools below)
+pip install "pydeepmapper[all]"          # everything
 ```
 
 From a clone:

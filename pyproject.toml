@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "deepmapper"
+name = "pydeepmapper"
 version = "1.0.0"
 description = "No-filtering, attribute-back analysis of high-dimensional omics: keep every feature, read it with a configurable backbone over multiple arrangements, and attribute the result to named features ('gene chords')."
 readme = "README.md"

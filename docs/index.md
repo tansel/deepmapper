@@ -12,8 +12,8 @@ absent from the reference annotation.
 ## Install
 
 ```bash
-pip install deepmapper            # core engine
-pip install "deepmapper[all]"     # + io, backbones, de-novo
+pip install pydeepmapper            # core engine
+pip install "pydeepmapper[all]"     # + io, backbones, de-novo
 ```
 
 ## Quickstart
